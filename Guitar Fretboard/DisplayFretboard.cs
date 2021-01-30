@@ -6,8 +6,6 @@ namespace Guitar_Fretboard
 {
     class DisplayFretboard
     {
-        GuitarString guitarString = new GuitarString();
-
         public void LeftHanded(GuitarString eString, GuitarString highEString, GuitarString bString, GuitarString gString, GuitarString dString, GuitarString aString)
         {
             eString.CountLeft();

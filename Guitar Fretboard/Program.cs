@@ -24,34 +24,33 @@ namespace Guitar_Fretboard
             Random random = new Random();
             int randomString = random.Next(6);
             int randomNote = random.Next(25);
-
             QuestionAnswer questionAnswer = new QuestionAnswer();
 
             switch (randomString)
             {
                 case 0:
                     questionAnswer.AskQuestion(eString, randomNote);
-                    questionAnswer.AnswerDisplay(eString, randomNote);
+                    questionAnswer.DisplayAnswer(eString, randomNote);
                     break;
                 case 1:
                     questionAnswer.AskQuestion(aString, randomNote);
-                    questionAnswer.AnswerDisplay(aString, randomNote);
+                    questionAnswer.DisplayAnswer(aString, randomNote);
                     break;
                 case 2:
                     questionAnswer.AskQuestion(dString, randomNote);
-                    questionAnswer.AnswerDisplay(dString, randomNote);
+                    questionAnswer.DisplayAnswer(dString, randomNote);
                     break;
                 case 3:
                     questionAnswer.AskQuestion(gString, randomNote);
-                    questionAnswer.AnswerDisplay(gString, randomNote);
+                    questionAnswer.DisplayAnswer(gString, randomNote);
                     break;
                 case 4:
                     questionAnswer.AskQuestion(bString, randomNote);
-                    questionAnswer.AnswerDisplay(bString, randomNote);
+                    questionAnswer.DisplayAnswer(bString, randomNote);
                     break;
                 case 5:
                     questionAnswer.AskQuestion(highEString, randomNote);
-                    questionAnswer.AnswerDisplay(highEString, randomNote);
+                    questionAnswer.DisplayAnswer(highEString, randomNote);
                     break;
             }
         }
