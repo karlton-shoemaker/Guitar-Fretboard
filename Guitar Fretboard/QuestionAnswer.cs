@@ -56,5 +56,22 @@ namespace Guitar_Fretboard
                     break;
             }
         }
+        public void RepeatQuestionAnswerLoop(GuitarString eString, GuitarString highEString, GuitarString bString, GuitarString gString, GuitarString dString, GuitarString aString)
+        {
+            bool repeatQuestion = true;
+            while (repeatQuestion)
+            {
+                QuestionAnswer questionAnswer = new QuestionAnswer();
+                questionAnswer.RandomFretQuestion(eString, highEString, bString, gString, dString, aString);
+
+                string quit = Console.ReadLine();
+                quit = quit.ToLower();
+                if (quit == "q")
+                {
+                    repeatQuestion = false;
+                }
+                Console.Clear();
+            }
+        }
     }
 }

@@ -6,6 +6,13 @@ namespace Guitar_Fretboard
     {
         static void Main(string[] args)
         {
+            //Goals for program:
+            //-Add additional tunings
+            //-Rework fretboard diagrams so that fret numbers accurately correspond to correct notes
+            //-Create filter for different keys
+            //-Add menu
+            //-Add quizzes for other instruments: bass (cut off bString and highEString), ukulele, banjo, etc.
+
             GuitarString eString = new GuitarString("E ", "F ", "F#", "G ", "G#", "A ", "A#", "B ", "C ", "C#", "D ", "D#");
             GuitarString aString = new GuitarString("A ", "A#", "B ", "C ", "C#", "D ", "D#", "E ", "F ", "F#", "G ", "G#");
             GuitarString dString = new GuitarString("D ", "D#", "E ", "F ", "F#", "G ", "G#", "A ", "A#", "B ", "C ", "C#");
@@ -21,20 +28,8 @@ namespace Guitar_Fretboard
             Console.ReadKey();
             Console.Clear();
 
-            bool repeatQuestion = true;
-            while (repeatQuestion)
-            {
-                QuestionAnswer questionAnswer = new QuestionAnswer();
-                questionAnswer.RandomFretQuestion(eString, highEString, bString, gString, dString, aString);
-
-                string quit = Console.ReadLine();
-                quit = quit.ToLower();
-                if (quit == "q")
-                {
-                    repeatQuestion = false;
-                }
-                Console.Clear();
-            }
+            QuestionAnswer questionAnswer = new QuestionAnswer(); 
+            questionAnswer.RepeatQuestionAnswerLoop(eString, highEString, bString, gString, dString, aString);
         }
     }
 }

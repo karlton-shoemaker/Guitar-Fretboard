@@ -8,6 +8,7 @@ namespace Guitar_Fretboard
     {
         public void LeftHanded(GuitarString eString, GuitarString highEString, GuitarString bString, GuitarString gString, GuitarString dString, GuitarString aString)
         {
+            Console.WriteLine("Below is a fretboard diagram for a left-handed guitar.");
             eString.CountLeft();
             Console.WriteLine();
             highEString.DrawStringLeft();
@@ -25,6 +26,7 @@ namespace Guitar_Fretboard
         }
         public void RightHanded(GuitarString eString, GuitarString highEString, GuitarString bString, GuitarString gString, GuitarString dString, GuitarString aString)
         {
+            Console.WriteLine("Below is a fretboard diagram for a right-handed guitar.");
             eString.CountRight();
             Console.WriteLine();
             highEString.DrawStringRight();
