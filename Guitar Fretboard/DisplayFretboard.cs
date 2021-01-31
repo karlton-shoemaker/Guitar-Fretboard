@@ -42,5 +42,41 @@ namespace Guitar_Fretboard
             eString.DrawStringRight();
             Console.WriteLine();
         }
+        public void LeftHanded24(GuitarString eString, GuitarString highEString, GuitarString bString, GuitarString gString, GuitarString dString, GuitarString aString)
+        {
+            Console.WriteLine("Below is a fretboard diagram for a left-handed guitar.");
+            eString.CountLeft24();
+            Console.WriteLine();
+            highEString.DrawStringLeft24();
+            Console.WriteLine();
+            bString.DrawStringLeft24();
+            Console.WriteLine();
+            gString.DrawStringLeft24();
+            Console.WriteLine();
+            dString.DrawStringLeft24();
+            Console.WriteLine();
+            aString.DrawStringLeft24();
+            Console.WriteLine();
+            eString.DrawStringLeft24();
+            Console.WriteLine();
+        }
+        public void RightHanded24(GuitarString eString, GuitarString highEString, GuitarString bString, GuitarString gString, GuitarString dString, GuitarString aString)
+        {
+            Console.WriteLine("Below is a fretboard diagram for a right-handed guitar.");
+            eString.CountRight24();
+            Console.WriteLine();
+            highEString.DrawStringRight24();
+            Console.WriteLine();
+            bString.DrawStringRight24();
+            Console.WriteLine();
+            gString.DrawStringRight24();
+            Console.WriteLine();
+            dString.DrawStringRight24();
+            Console.WriteLine();
+            aString.DrawStringRight24();
+            Console.WriteLine();
+            eString.DrawStringRight24();
+            Console.WriteLine();
+        }
     }
 }
