@@ -8,6 +8,7 @@ namespace Guitar_Fretboard
     {
         public void AskQuestion(GuitarString guitarString, int randomNote)
         {
+            Console.WriteLine("What note is this?");
             int answerFret;
             answerFret = guitarString.Fret[randomNote];
             Console.WriteLine(guitarString.Note[0] + answerFret);
@@ -17,7 +18,43 @@ namespace Guitar_Fretboard
             string answerNote;
             answerNote = guitarString.Note[randomNote];
             Console.ReadKey();
+            Console.WriteLine("Answer: (Press 'Q' to exit.)");
             Console.WriteLine(answerNote);
+        }
+        public void RandomFretQuestion(GuitarString eString, GuitarString highEString, GuitarString bString, GuitarString gString, GuitarString dString, GuitarString aString)
+        {
+            Random random = new Random();
+            int randomString = random.Next(6);
+            int randomNote = random.Next(23);
+            QuestionAnswer questionAnswer = new QuestionAnswer();
+
+            switch (randomString)
+            {
+                case 0:
+                    questionAnswer.AskQuestion(eString, randomNote);
+                    questionAnswer.DisplayAnswer(eString, randomNote);
+                    break;
+                case 1:
+                    questionAnswer.AskQuestion(aString, randomNote);
+                    questionAnswer.DisplayAnswer(aString, randomNote);
+                    break;
+                case 2:
+                    questionAnswer.AskQuestion(dString, randomNote);
+                    questionAnswer.DisplayAnswer(dString, randomNote);
+                    break;
+                case 3:
+                    questionAnswer.AskQuestion(gString, randomNote);
+                    questionAnswer.DisplayAnswer(gString, randomNote);
+                    break;
+                case 4:
+                    questionAnswer.AskQuestion(bString, randomNote);
+                    questionAnswer.DisplayAnswer(bString, randomNote);
+                    break;
+                case 5:
+                    questionAnswer.AskQuestion(highEString, randomNote);
+                    questionAnswer.DisplayAnswer(highEString, randomNote);
+                    break;
+            }
         }
     }
 }

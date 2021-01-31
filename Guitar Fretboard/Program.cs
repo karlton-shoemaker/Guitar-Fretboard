@@ -21,37 +21,19 @@ namespace Guitar_Fretboard
             Console.ReadKey();
             Console.Clear();
 
-            Random random = new Random();
-            int randomString = random.Next(6);
-            int randomNote = random.Next(25);
-            QuestionAnswer questionAnswer = new QuestionAnswer();
-
-            switch (randomString)
+            bool repeatQuestion = true;
+            while (repeatQuestion)
             {
-                case 0:
-                    questionAnswer.AskQuestion(eString, randomNote);
-                    questionAnswer.DisplayAnswer(eString, randomNote);
-                    break;
-                case 1:
-                    questionAnswer.AskQuestion(aString, randomNote);
-                    questionAnswer.DisplayAnswer(aString, randomNote);
-                    break;
-                case 2:
-                    questionAnswer.AskQuestion(dString, randomNote);
-                    questionAnswer.DisplayAnswer(dString, randomNote);
-                    break;
-                case 3:
-                    questionAnswer.AskQuestion(gString, randomNote);
-                    questionAnswer.DisplayAnswer(gString, randomNote);
-                    break;
-                case 4:
-                    questionAnswer.AskQuestion(bString, randomNote);
-                    questionAnswer.DisplayAnswer(bString, randomNote);
-                    break;
-                case 5:
-                    questionAnswer.AskQuestion(highEString, randomNote);
-                    questionAnswer.DisplayAnswer(highEString, randomNote);
-                    break;
+                QuestionAnswer questionAnswer = new QuestionAnswer();
+                questionAnswer.RandomFretQuestion(eString, highEString, bString, gString, dString, aString);
+
+                string quit = Console.ReadLine();
+                quit = quit.ToLower();
+                if (quit == "q")
+                {
+                    repeatQuestion = false;
+                }
+                Console.Clear();
             }
         }
     }
