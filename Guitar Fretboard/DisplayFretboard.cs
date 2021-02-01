@@ -23,6 +23,7 @@ namespace Guitar_Fretboard
             Console.WriteLine();
             eString.DrawStringLeft();
             Console.WriteLine();
+            Console.ReadKey();
         }
         public void RightHanded(GuitarString eString, GuitarString highEString, GuitarString bString, GuitarString gString, GuitarString dString, GuitarString aString)
         {
@@ -41,6 +42,7 @@ namespace Guitar_Fretboard
             Console.WriteLine();
             eString.DrawStringRight();
             Console.WriteLine();
+            Console.ReadKey();
         }
         public void LeftHanded24(GuitarString eString, GuitarString highEString, GuitarString bString, GuitarString gString, GuitarString dString, GuitarString aString)
         {
@@ -59,6 +61,7 @@ namespace Guitar_Fretboard
             Console.WriteLine();
             eString.DrawStringLeft24();
             Console.WriteLine();
+            Console.ReadKey();
         }
         public void RightHanded24(GuitarString eString, GuitarString highEString, GuitarString bString, GuitarString gString, GuitarString dString, GuitarString aString)
         {
@@ -77,6 +80,7 @@ namespace Guitar_Fretboard
             Console.WriteLine();
             eString.DrawStringRight24();
             Console.WriteLine();
+            Console.ReadKey();
         }
     }
 }

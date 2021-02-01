@@ -18,7 +18,7 @@ namespace Guitar_Fretboard
             string answerNote;
             answerNote = guitarString.Note[randomNote];
             Console.ReadKey();
-            Console.WriteLine("Answer: (Press 'Q' to exit.)");
+            Console.WriteLine("Answer: (Press 'Q' to return to menu.)");
             Console.WriteLine(answerNote);
         }
         public void RandomFretQuestion(GuitarString eString, GuitarString highEString, GuitarString bString, GuitarString gString, GuitarString dString, GuitarString aString)

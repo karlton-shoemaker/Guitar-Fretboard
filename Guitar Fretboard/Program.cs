@@ -8,7 +8,6 @@ namespace Guitar_Fretboard
         {
             //Goals for program:
             //-Add additional tunings
-            //-Rework fretboard diagrams so that fret numbers accurately correspond to correct notes
             //-Create filter for different keys
             //-Add menu
             //-Add quizzes for other instruments: bass (cut off bString and highEString), ukulele, banjo, etc.
@@ -21,15 +20,53 @@ namespace Guitar_Fretboard
             GuitarString highEString = new GuitarString("e ", "f ", "f#", "g ", "g#", "a ", "a#", "b ", "c ", "c#", "d ", "d#");
 
             DisplayFretboard displayFretboard = new DisplayFretboard();
-            displayFretboard.LeftHanded(eString, highEString, bString, gString, dString, aString);
-            Console.WriteLine();
-            displayFretboard.RightHanded(eString, highEString, bString, gString, dString, aString);
-
-            Console.ReadKey();
-            Console.Clear();
-
             QuestionAnswer questionAnswer = new QuestionAnswer();
-            questionAnswer.RepeatQuestionAnswerLoop(eString, highEString, bString, gString, dString, aString);
+
+            bool refreshMenu = true;
+
+            while (refreshMenu)
+            {
+                Console.Clear();
+                Console.WriteLine("Which option would you like to do? Press 'Q' to exit.");
+                Console.WriteLine("1. Display Left-handed fretboard.");
+                Console.WriteLine("2. Display Right-handed fretboard.");
+                Console.WriteLine("3. Display Left-handed fretboard with 24 frets.");
+                Console.WriteLine("4. Display Right-handed fretboard with 24 frets.");
+                Console.WriteLine("5. Begin fret random fret quiz.");
+                string menuOption = Console.ReadLine().ToLower();
+
+                switch (menuOption)
+                {
+                    case "1":
+                        Console.Clear();
+                        displayFretboard.LeftHanded(eString, highEString, bString, gString, dString, aString);
+                        break;
+
+                    case "2":
+                        Console.Clear();
+                        displayFretboard.RightHanded(eString, highEString, bString, gString, dString, aString);
+                        break;
+
+                    case "3":
+                        Console.Clear();
+                        displayFretboard.LeftHanded24(eString, highEString, bString, gString, dString, aString);
+                        break;
+
+                    case "4":
+                        Console.Clear();
+                        displayFretboard.RightHanded24(eString, highEString, bString, gString, dString, aString);
+                        break;
+
+                    case "5":
+                        Console.Clear();
+                        questionAnswer.RepeatQuestionAnswerLoop(eString, highEString, bString, gString, dString, aString);
+                        break;
+
+                    case "q":
+                        refreshMenu = false;
+                        break;
+                }
+            }
         }
     }
 }
