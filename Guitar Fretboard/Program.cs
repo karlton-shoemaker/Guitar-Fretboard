@@ -28,7 +28,7 @@ namespace Guitar_Fretboard
             Console.ReadKey();
             Console.Clear();
 
-            QuestionAnswer questionAnswer = new QuestionAnswer(); 
+            QuestionAnswer questionAnswer = new QuestionAnswer();
             questionAnswer.RepeatQuestionAnswerLoop(eString, highEString, bString, gString, dString, aString);
         }
     }

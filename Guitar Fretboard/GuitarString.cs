@@ -91,7 +91,14 @@ namespace Guitar_Fretboard
         {
             for (int count = 22; count >= 0; count--)
             {
-                Console.Write(fret[count] + " ");
+                if (count < 10)
+                { 
+                    Console.Write(fret[count] + "  "); 
+                }
+                else
+                {
+                    Console.Write(fret[count] + " ");
+                }
             }
         }
 
@@ -99,7 +106,14 @@ namespace Guitar_Fretboard
         {
             for (int count = 0; count < 23; count++)
             {
-                Console.Write(fret[count] + " ");
+                if (count < 10)
+                {
+                    Console.Write(fret[count] + "  ");
+                }
+                else
+                {
+                    Console.Write(fret[count] + " ");
+                }
             }
         }
 
