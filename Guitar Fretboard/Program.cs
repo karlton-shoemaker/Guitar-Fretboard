@@ -9,7 +9,6 @@ namespace Guitar_Fretboard
             //Goals for program:
             //-Add additional tunings
             //-Create filter for different keys
-            //-Add menu
             //-Add quizzes for other instruments: bass (cut off bString and highEString), ukulele, banjo, etc.
 
             GuitarString eString = new GuitarString("E ", "F ", "F#", "G ", "G#", "A ", "A#", "B ", "C ", "C#", "D ", "D#");
@@ -19,8 +18,13 @@ namespace Guitar_Fretboard
             GuitarString bString = new GuitarString("B ", "C ", "C#", "D ", "D#", "E ", "F ", "F#", "G ", "G#", "A ", "A#");
             GuitarString highEString = new GuitarString("e ", "f ", "f#", "g ", "g#", "a ", "a#", "b ", "c ", "c#", "d ", "d#");
 
+            Tunings Tuning = new Tunings(eString, highEString, bString, gString, dString, aString);
+
             DisplayFretboard displayFretboard = new DisplayFretboard();
             QuestionAnswer questionAnswer = new QuestionAnswer();
+
+            //Tuning.EFlatStandard(eString, highEString, bString, gString, dString, aString);
+            //displayFretboard.LeftHanded(eString, highEString, bString, gString, dString, aString);
 
             bool refreshMenu = true;
 
@@ -32,7 +36,7 @@ namespace Guitar_Fretboard
                 Console.WriteLine("2. Display Right-handed fretboard.");
                 Console.WriteLine("3. Display Left-handed fretboard with 24 frets.");
                 Console.WriteLine("4. Display Right-handed fretboard with 24 frets.");
-                Console.WriteLine("5. Begin fret random fret quiz.");
+                Console.WriteLine("5. Begin random fret quiz.");
                 string menuOption = Console.ReadLine().ToLower();
 
                 switch (menuOption)
