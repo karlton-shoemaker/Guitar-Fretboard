@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Guitar_Fretboard
 {
@@ -18,13 +19,24 @@ namespace Guitar_Fretboard
             GuitarString bString = new GuitarString("B ", "C ", "C#", "D ", "D#", "E ", "F ", "F#", "G ", "G#", "A ", "A#");
             GuitarString highEString = new GuitarString("e ", "f ", "f#", "g ", "g#", "a ", "a#", "b ", "c ", "c#", "d ", "d#");
 
-            Tunings Tuning = new Tunings(eString, highEString, bString, gString, dString, aString);
+            Tuning tuning = new Tuning();
 
             DisplayFretboard displayFretboard = new DisplayFretboard();
             QuestionAnswer questionAnswer = new QuestionAnswer();
 
-            //Tuning.EFlatStandard(eString, highEString, bString, gString, dString, aString);
-            //displayFretboard.LeftHanded(eString, highEString, bString, gString, dString, aString);
+            List<GuitarString> eStandard = new List<GuitarString>();
+            tuning.EStandard(eStandard);
+
+            foreach (GuitarString item in eStandard)
+            {
+                for (int count = 0; count < 23; count++)
+                {
+                    Console.Write(item.note[count] + " ");
+                }
+                Console.WriteLine();
+            }
+
+            Console.ReadLine();
 
             bool refreshMenu = true;
 

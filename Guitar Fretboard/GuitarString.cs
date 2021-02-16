@@ -6,8 +6,8 @@ namespace Guitar_Fretboard
 {
     class GuitarString
     {
-        private int[] fret = new int[25];
-        private string[] note = new string[25];
+        public int[] fret = new int[25];
+        public string[] note = new string[25];
 
         public int[] Fret
         {
