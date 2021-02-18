@@ -27,16 +27,19 @@ namespace Guitar_Fretboard
             List<GuitarString> eStandard = new List<GuitarString>();
             tuning.EStandard(eStandard);
 
-            foreach (GuitarString item in eStandard)
-            {
-                for (int count = 0; count < 23; count++)
-                {
-                    Console.Write(item.note[count] + " ");
-                }
-                Console.WriteLine();
-            }
+            List<GuitarString> eFlatStandard = new List<GuitarString>();
+            tuning.EFlatStandard(eFlatStandard);
 
-            Console.ReadLine();
+            //foreach (GuitarString item in eFlatStandard)
+            //{
+            //    for (int count = 0; count < 23; count++)
+            //    {
+            //        Console.Write(item.note[count] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            //Console.ReadLine();
 
             bool refreshMenu = true;
 
@@ -55,22 +58,23 @@ namespace Guitar_Fretboard
                 {
                     case "1":
                         Console.Clear();
-                        displayFretboard.LeftHanded(eString, highEString, bString, gString, dString, aString);
+                        //displayFretboard.LeftHanded(eString, highEString, bString, gString, dString, aString);
+                        displayFretboard.LeftHanded(eStandard);
                         break;
 
                     case "2":
                         Console.Clear();
-                        displayFretboard.RightHanded(eString, highEString, bString, gString, dString, aString);
+                        displayFretboard.RightHanded(eStandard);
                         break;
 
                     case "3":
                         Console.Clear();
-                        displayFretboard.LeftHanded24(eString, highEString, bString, gString, dString, aString);
+                        displayFretboard.LeftHanded24(eStandard);
                         break;
 
                     case "4":
                         Console.Clear();
-                        displayFretboard.RightHanded24(eString, highEString, bString, gString, dString, aString);
+                        displayFretboard.RightHanded24(eStandard);
                         break;
 
                     case "5":
