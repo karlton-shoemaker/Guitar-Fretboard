@@ -12,12 +12,12 @@ namespace Guitar_Fretboard
             //-Create filter for different keys
             //-Add quizzes for other instruments: bass (cut off bString and highEString), ukulele, banjo, etc.
 
-            GuitarString eString = new GuitarString("E ", "F ", "F#", "G ", "G#", "A ", "A#", "B ", "C ", "C#", "D ", "D#");
-            GuitarString aString = new GuitarString("A ", "A#", "B ", "C ", "C#", "D ", "D#", "E ", "F ", "F#", "G ", "G#");
-            GuitarString dString = new GuitarString("D ", "D#", "E ", "F ", "F#", "G ", "G#", "A ", "A#", "B ", "C ", "C#");
-            GuitarString gString = new GuitarString("G ", "G#", "A ", "A#", "B ", "C ", "C#", "D ", "D#", "E ", "F ", "F#");
-            GuitarString bString = new GuitarString("B ", "C ", "C#", "D ", "D#", "E ", "F ", "F#", "G ", "G#", "A ", "A#");
-            GuitarString highEString = new GuitarString("e ", "f ", "f#", "g ", "g#", "a ", "a#", "b ", "c ", "c#", "d ", "d#");
+            //GuitarString eString = new GuitarString("E ", "F ", "F#", "G ", "G#", "A ", "A#", "B ", "C ", "C#", "D ", "D#");
+            //GuitarString aString = new GuitarString("A ", "A#", "B ", "C ", "C#", "D ", "D#", "E ", "F ", "F#", "G ", "G#");
+            //GuitarString dString = new GuitarString("D ", "D#", "E ", "F ", "F#", "G ", "G#", "A ", "A#", "B ", "C ", "C#");
+            //GuitarString gString = new GuitarString("G ", "G#", "A ", "A#", "B ", "C ", "C#", "D ", "D#", "E ", "F ", "F#");
+            //GuitarString bString = new GuitarString("B ", "C ", "C#", "D ", "D#", "E ", "F ", "F#", "G ", "G#", "A ", "A#");
+            //GuitarString highEString = new GuitarString("e ", "f ", "f#", "g ", "g#", "a ", "a#", "b ", "c ", "c#", "d ", "d#");
 
             Tuning tuning = new Tuning();
 
@@ -29,17 +29,6 @@ namespace Guitar_Fretboard
 
             List<GuitarString> eFlatStandard = new List<GuitarString>();
             tuning.EFlatStandard(eFlatStandard);
-
-            //foreach (GuitarString item in eFlatStandard)
-            //{
-            //    for (int count = 0; count < 23; count++)
-            //    {
-            //        Console.Write(item.note[count] + " ");
-            //    }
-            //    Console.WriteLine();
-            //}
-
-            //Console.ReadLine();
 
             bool refreshMenu = true;
 
@@ -58,7 +47,6 @@ namespace Guitar_Fretboard
                 {
                     case "1":
                         Console.Clear();
-                        //displayFretboard.LeftHanded(eString, highEString, bString, gString, dString, aString);
                         displayFretboard.LeftHanded(eStandard);
                         break;
 
@@ -79,7 +67,7 @@ namespace Guitar_Fretboard
 
                     case "5":
                         Console.Clear();
-                        questionAnswer.RepeatQuestionAnswerLoop(eString, highEString, bString, gString, dString, aString);
+                        questionAnswer.RepeatQuestionAnswerLoop(eStandard);
                         break;
 
                     case "q":
