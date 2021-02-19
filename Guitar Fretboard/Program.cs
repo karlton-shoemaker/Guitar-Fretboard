@@ -30,6 +30,8 @@ namespace Guitar_Fretboard
             List<GuitarString> eFlatStandard = new List<GuitarString>();
             tuning.EFlatStandard(eFlatStandard);
 
+            List<GuitarString> currentTuning = eStandard;
+
             bool refreshMenu = true;
 
             while (refreshMenu)
@@ -41,33 +43,56 @@ namespace Guitar_Fretboard
                 Console.WriteLine("3. Display Left-handed fretboard with 24 frets.");
                 Console.WriteLine("4. Display Right-handed fretboard with 24 frets.");
                 Console.WriteLine("5. Begin random fret quiz.");
+                Console.WriteLine("6. Change Tuning");
                 string menuOption = Console.ReadLine().ToLower();
 
                 switch (menuOption)
                 {
                     case "1":
                         Console.Clear();
-                        displayFretboard.LeftHanded(eStandard);
+                        displayFretboard.LeftHanded(currentTuning);
                         break;
 
                     case "2":
                         Console.Clear();
-                        displayFretboard.RightHanded(eStandard);
+                        displayFretboard.RightHanded(currentTuning);
                         break;
 
                     case "3":
                         Console.Clear();
-                        displayFretboard.LeftHanded24(eStandard);
+                        displayFretboard.LeftHanded24(currentTuning);
                         break;
 
                     case "4":
                         Console.Clear();
-                        displayFretboard.RightHanded24(eStandard);
+                        displayFretboard.RightHanded24(currentTuning);
                         break;
 
                     case "5":
                         Console.Clear();
-                        questionAnswer.RepeatQuestionAnswerLoop(eStandard);
+                        questionAnswer.RepeatQuestionAnswerLoop(currentTuning);
+                        break;
+
+                    case "6":
+                        Console.Clear();
+                        Console.WriteLine("Select your tuning:");
+                        Console.WriteLine("1. E Standard (default)");
+                        Console.WriteLine("2. E Flat Standard (AKA D# Standard)");
+                        string tuningChoice = Console.ReadLine().ToLower();
+
+                        switch (tuningChoice)
+                        {
+                            case "1":
+                                currentTuning = eStandard;
+                                break;
+                            case "2":
+                                currentTuning = eFlatStandard;
+                                break;
+                            default:
+                                Console.WriteLine("Invalid selection. You will be returned to main menu.");
+                                Console.ReadLine();
+                                break;
+                        }
                         break;
 
                     case "q":
