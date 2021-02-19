@@ -20,6 +20,9 @@ namespace Guitar_Fretboard
             List<GuitarString> eFlatStandard = new List<GuitarString>();
             tuning.EFlatStandard(eFlatStandard);
 
+            List<GuitarString> bassEStandard = new List<GuitarString>();
+            tuning.BassEStandard(bassEStandard);
+
             List<GuitarString> currentTuning = eStandard;
 
             bool refreshMenu = true;
