@@ -26,6 +26,7 @@ namespace Guitar_Fretboard
             Random random = new Random();
             int randomString = random.Next(6);
             int randomNote = random.Next(numberOfFrets);
+            int numberOfStrings = strings.Count;
 
             switch (randomString)
             {
@@ -46,10 +47,18 @@ namespace Guitar_Fretboard
                     DisplayAnswer(strings[3], randomNote);
                     break;
                 case 4:
+                    if (numberOfStrings <= 4)
+                    {
+                        break;
+                    }
                     AskQuestion(strings[4], randomNote);
                     DisplayAnswer(strings[4], randomNote);
                     break;
                 case 5:
+                    if (numberOfStrings <= 5)
+                    {
+                        break;
+                    }
                     AskQuestion(strings[5], randomNote);
                     DisplayAnswer(strings[5], randomNote);
                     break;
