@@ -29,13 +29,13 @@ namespace Guitar_Fretboard
         public static void LeftHanded(List<InstrumentString> strings)
         {
             Console.WriteLine("Below is a fretboard diagram for a left-handed guitar.");
-            strings[0].CountLeft();
+            strings[0].CountLeft(24);
             Console.WriteLine();
             int numberOfStrings = strings.Count;
 
             for (int index = 0; index < numberOfStrings; index++)
             {
-                strings[index].DrawStringLeft();
+                strings[index].DrawStringLeft(24);
                 Console.WriteLine();
             }
 
@@ -45,22 +45,38 @@ namespace Guitar_Fretboard
         public static void RightHanded(List<InstrumentString> strings)
         {
             Console.WriteLine("Below is a fretboard diagram for a right-handed guitar.");
-            strings[0].CountRight();
+            strings[0].CountRight(24);
             Console.WriteLine();
-            strings[0].DrawStringRight();
-            Console.WriteLine();
-            strings[1].DrawStringRight();
-            Console.WriteLine();
-            strings[2].DrawStringRight();
-            Console.WriteLine();
-            strings[3].DrawStringRight();
-            Console.WriteLine();
-            strings[4].DrawStringRight();
-            Console.WriteLine();
-            strings[5].DrawStringRight();
-            Console.WriteLine();
+            int numberOfStrings = strings.Count;
+
+            for (int index = 0; index < numberOfStrings; index++)
+            {
+                strings[index].DrawStringRight(24);
+                Console.WriteLine();
+            }
+
             Console.ReadKey();
         }
+
+        //public static void RightHanded(List<InstrumentString> strings)
+        //{
+        //    Console.WriteLine("Below is a fretboard diagram for a right-handed guitar.");
+        //    strings[0].CountRight();
+        //    Console.WriteLine();
+        //    strings[0].DrawStringRight();
+        //    Console.WriteLine();
+        //    strings[1].DrawStringRight();
+        //    Console.WriteLine();
+        //    strings[2].DrawStringRight();
+        //    Console.WriteLine();
+        //    strings[3].DrawStringRight();
+        //    Console.WriteLine();
+        //    strings[4].DrawStringRight();
+        //    Console.WriteLine();
+        //    strings[5].DrawStringRight();
+        //    Console.WriteLine();
+        //    Console.ReadKey();
+        //}
         public static void LeftHanded24(List<InstrumentString> strings)
         {
             Console.WriteLine("Below is a fretboard diagram for a left-handed guitar.");

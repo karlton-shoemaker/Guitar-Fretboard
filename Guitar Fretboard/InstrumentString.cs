@@ -79,11 +79,57 @@ namespace Guitar_Fretboard
             }
         }
 
+        public void DrawStringLeft(int neckLength)
+        {
+            for (int count = neckLength; count >= 0; count--)
+            {
+                Console.Write(note[count] + " ");
+            }
+        }
+
         public void DrawStringRight()
         {
             for (int count = 0; count < 23; count++)
             {
                 Console.Write(note[count] + " ");
+            }
+        }
+
+        public void DrawStringRight(int neckLength)
+        {
+            for (int count = 0; count <= neckLength; count++)
+            {
+                Console.Write(note[count] + " ");
+            }
+        }
+
+        public void CountLeft(int neckLength)
+        {
+            for (int count = neckLength; count >= 0; count--)
+            {
+                if (count < 10)
+                {
+                    Console.Write(fret[count] + "  ");
+                }
+                else
+                {
+                    Console.Write(fret[count] + " ");
+                }
+            }
+        }
+
+        public void CountRight(int neckLength)
+        {
+            for (int count = 0; count <= neckLength; count++)
+            {
+                if (count < 10)
+                {
+                    Console.Write(fret[count] + "  ");
+                }
+                else
+                {
+                    Console.Write(fret[count] + " ");
+                }
             }
         }
 
