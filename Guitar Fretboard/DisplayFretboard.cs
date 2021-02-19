@@ -26,7 +26,7 @@ namespace Guitar_Fretboard
         //    Console.ReadKey();
         //}
 
-        public static void LeftHanded(List<GuitarString> strings)
+        public static void LeftHanded(List<InstrumentString> strings)
         {
             Console.WriteLine("Below is a fretboard diagram for a left-handed guitar.");
             strings[0].CountLeft();
@@ -42,7 +42,7 @@ namespace Guitar_Fretboard
             Console.ReadKey();
         }
 
-        public static void RightHanded(List<GuitarString> strings)
+        public static void RightHanded(List<InstrumentString> strings)
         {
             Console.WriteLine("Below is a fretboard diagram for a right-handed guitar.");
             strings[0].CountRight();
@@ -61,7 +61,7 @@ namespace Guitar_Fretboard
             Console.WriteLine();
             Console.ReadKey();
         }
-        public static void LeftHanded24(List<GuitarString> strings)
+        public static void LeftHanded24(List<InstrumentString> strings)
         {
             Console.WriteLine("Below is a fretboard diagram for a left-handed guitar.");
             strings[0].CountLeft24();
@@ -80,7 +80,7 @@ namespace Guitar_Fretboard
             Console.WriteLine();
             Console.ReadKey();
         }
-        public static void RightHanded24(List<GuitarString> strings)
+        public static void RightHanded24(List<InstrumentString> strings)
         {
             Console.WriteLine("Below is a fretboard diagram for a right-handed guitar.");
             strings[0].CountRight24();

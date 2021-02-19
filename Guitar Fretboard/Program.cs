@@ -14,16 +14,16 @@ namespace Guitar_Fretboard
 
             Tuning tuning = new Tuning();
 
-            List<GuitarString> eStandard = new List<GuitarString>();
+            List<InstrumentString> eStandard = new List<InstrumentString>();
             tuning.EStandard(eStandard);
 
-            List<GuitarString> eFlatStandard = new List<GuitarString>();
+            List<InstrumentString> eFlatStandard = new List<InstrumentString>();
             tuning.EFlatStandard(eFlatStandard);
 
-            List<GuitarString> bassEStandard = new List<GuitarString>();
+            List<InstrumentString> bassEStandard = new List<InstrumentString>();
             tuning.BassEStandard(bassEStandard);
 
-            List<GuitarString> currentTuning = eStandard;
+            List<InstrumentString> currentTuning = eStandard;
 
             bool refreshMenu = true;
 
@@ -36,7 +36,7 @@ namespace Guitar_Fretboard
                 Console.WriteLine("3. Display Left-handed fretboard with 24 frets");
                 Console.WriteLine("4. Display Right-handed fretboard with 24 frets");
                 Console.WriteLine("5. Begin random fret quiz");
-                Console.WriteLine("6. Change Tuning");
+                Console.WriteLine("6. Change tuning");
                 string menuOption = Console.ReadLine().ToLower();
 
                 switch (menuOption)

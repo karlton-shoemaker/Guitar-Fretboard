@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Guitar_Fretboard
 {
-    class GuitarString
+    class InstrumentString
     {
         private int[] fret = new int[25];
         private string[] note = new string[25];
@@ -32,12 +32,12 @@ namespace Guitar_Fretboard
                 note = value;
             }
         }
-        public GuitarString()
+        public InstrumentString()
         {
 
         }
 
-        public GuitarString(string open, string fretOne, string fretTwo, string fretThree, string fretFour, string fretFive, string fretSix, string fretSeven, string fretEight, string fretNine,
+        public InstrumentString(string open, string fretOne, string fretTwo, string fretThree, string fretFour, string fretFive, string fretSix, string fretSeven, string fretEight, string fretNine,
             string fretTen, string fretEleven)
         {
             for (int fretNumber = 0; fretNumber < 25; fretNumber++)

@@ -6,14 +6,14 @@ namespace Guitar_Fretboard
 {
     static class QuestionAnswer
     {
-        public static void AskQuestion(GuitarString guitarString, int randomNote)
+        public static void AskQuestion(InstrumentString guitarString, int randomNote)
         {
             Console.WriteLine("What note is this?");
             int answerFret;
             answerFret = guitarString.Fret[randomNote];
             Console.WriteLine(guitarString.Note[0] + answerFret);
         }
-        public static void DisplayAnswer(GuitarString guitarString, int randomNote)
+        public static void DisplayAnswer(InstrumentString guitarString, int randomNote)
         {
             string answerNote;
             answerNote = guitarString.Note[randomNote];
@@ -21,7 +21,7 @@ namespace Guitar_Fretboard
             Console.WriteLine("Answer: (Press 'Q' to return to menu.)");
             Console.WriteLine(answerNote);
         }
-        public static void RandomFretQuestion(List<GuitarString> strings, int numberOfFrets)
+        public static void RandomFretQuestion(List<InstrumentString> strings, int numberOfFrets)
         {
             Random random = new Random();
             int randomString = random.Next(6);
@@ -55,7 +55,7 @@ namespace Guitar_Fretboard
                     break;
             }
         }
-        public static void RepeatQuestionAnswerLoop(List<GuitarString> strings)
+        public static void RepeatQuestionAnswerLoop(List<InstrumentString> strings)
         {
             bool repeatQuestion = true;
             while (repeatQuestion)
@@ -71,7 +71,7 @@ namespace Guitar_Fretboard
                 Console.Clear();
             }
         }
-        public static void RepeatQuestionAnswerLoop24Fret(List<GuitarString> strings)
+        public static void RepeatQuestionAnswerLoop24Fret(List<InstrumentString> strings)
         {
             bool repeatQuestion = true;
             while (repeatQuestion)
