@@ -33,10 +33,9 @@ namespace Guitar_Fretboard
                 Console.WriteLine("Which option would you like to do? Press 'Q' to exit");
                 Console.WriteLine("1. Display Left-handed fretboard");
                 Console.WriteLine("2. Display Right-handed fretboard");
-                Console.WriteLine("3. Display Left-handed fretboard with 24 frets");
-                Console.WriteLine("4. Display Right-handed fretboard with 24 frets");
-                Console.WriteLine("5. Begin random fret quiz");
-                Console.WriteLine("6. Change tuning");
+                Console.WriteLine("3. Begin random fret quiz");
+                Console.WriteLine("4. Change tuning");
+                Console.WriteLine("5. Change instrument");
                 string menuOption = Console.ReadLine().ToLower();
 
                 switch (menuOption)
@@ -53,20 +52,10 @@ namespace Guitar_Fretboard
 
                     case "3":
                         Console.Clear();
-                        DisplayFretboard.LeftHanded24(currentTuning);
-                        break;
-
-                    case "4":
-                        Console.Clear();
-                        DisplayFretboard.RightHanded24(currentTuning);
-                        break;
-
-                    case "5":
-                        Console.Clear();
                         QuestionAnswer.RepeatQuestionAnswerLoop(currentTuning);
                         break;
 
-                    case "6":
+                    case "4":
                         Console.Clear();
                         Console.WriteLine("Select your tuning:");
                         Console.WriteLine("1. E Standard (default)");
@@ -80,6 +69,28 @@ namespace Guitar_Fretboard
                                 break;
                             case "2":
                                 currentTuning = eFlatStandard;
+                                break;
+                            default:
+                                Console.WriteLine("Invalid selection. You will be returned to main menu.");
+                                Console.ReadLine();
+                                break;
+                        }
+                        break;
+
+                    case "5":
+                        Console.Clear();
+                        Console.WriteLine("Select your instrument:");
+                        Console.WriteLine("1. Guitar (default)");
+                        Console.WriteLine("2. Bass guitar");
+                        string instrumentChoice = Console.ReadLine().ToLower();
+
+                        switch (instrumentChoice)
+                        {
+                            case "1":
+                                currentTuning = eStandard;
+                                break;
+                            case "2":
+                                currentTuning = bassEStandard;
                                 break;
                             default:
                                 Console.WriteLine("Invalid selection. You will be returned to main menu.");
