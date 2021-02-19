@@ -20,6 +20,12 @@ namespace Guitar_Fretboard
             List<InstrumentString> eFlatStandard = new List<InstrumentString>();
             tuning.EFlatStandard(eFlatStandard);
 
+            List<InstrumentString> dropD = new List<InstrumentString>();
+            tuning.DropD(dropD);
+
+            List<InstrumentString> dropDFlat = new List<InstrumentString>();
+            tuning.DropDFlat(dropDFlat);
+
             List<InstrumentString> bassEStandard = new List<InstrumentString>();
             tuning.BassEStandard(bassEStandard);
 
@@ -61,6 +67,8 @@ namespace Guitar_Fretboard
                         Console.WriteLine("Select your tuning:");
                         Console.WriteLine("1. E Standard (default)");
                         Console.WriteLine("2. E Flat Standard (AKA D# Standard)");
+                        Console.WriteLine("3. Drop D");
+                        Console.WriteLine("4. Drop D Flat (AKA Drop C#)");
                         string tuningChoice = Console.ReadLine().ToLower();
 
                         switch (tuningChoice)
@@ -71,6 +79,14 @@ namespace Guitar_Fretboard
                                 break;
                             case "2":
                                 currentTuning = eFlatStandard;
+                                currentNumberOfFrets = 22;
+                                break;
+                            case "3":
+                                currentTuning = dropD;
+                                currentNumberOfFrets = 22;
+                                break;
+                            case "4":
+                                currentTuning = dropDFlat;
                                 currentNumberOfFrets = 22;
                                 break;
                             default:
