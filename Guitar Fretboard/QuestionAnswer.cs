@@ -64,12 +64,13 @@ namespace Guitar_Fretboard
                     break;
             }
         }
-        public static void RepeatQuestionAnswerLoop(List<InstrumentString> strings)
+        public static void RepeatQuestionAnswerLoop(List<InstrumentString> strings, int numberOfFrets)
         {
+            int numberForRNG = numberOfFrets + 1;
             bool repeatQuestion = true;
             while (repeatQuestion)
             {
-                RandomFretQuestion(strings, 23);
+                RandomFretQuestion(strings, numberForRNG);
 
                 string quit = Console.ReadLine();
                 quit = quit.ToLower();

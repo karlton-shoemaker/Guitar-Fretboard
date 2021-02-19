@@ -26,32 +26,32 @@ namespace Guitar_Fretboard
         //    Console.ReadKey();
         //}
 
-        public static void LeftHanded(List<InstrumentString> strings)
+        public static void LeftHanded(List<InstrumentString> strings, int numberOfFrets)
         {
             Console.WriteLine("Below is a fretboard diagram for a left-handed guitar.");
-            strings[0].CountLeft(24);
+            strings[0].CountLeft(numberOfFrets);
             Console.WriteLine();
             int numberOfStrings = strings.Count;
 
             for (int index = 0; index < numberOfStrings; index++)
             {
-                strings[index].DrawStringLeft(24);
+                strings[index].DrawStringLeft(numberOfFrets);
                 Console.WriteLine();
             }
 
             Console.ReadKey();
         }
 
-        public static void RightHanded(List<InstrumentString> strings)
+        public static void RightHanded(List<InstrumentString> strings, int numberOfFrets)
         {
             Console.WriteLine("Below is a fretboard diagram for a right-handed guitar.");
-            strings[0].CountRight(24);
+            strings[0].CountRight(numberOfFrets);
             Console.WriteLine();
             int numberOfStrings = strings.Count;
 
             for (int index = 0; index < numberOfStrings; index++)
             {
-                strings[index].DrawStringRight(24);
+                strings[index].DrawStringRight(numberOfFrets);
                 Console.WriteLine();
             }
 

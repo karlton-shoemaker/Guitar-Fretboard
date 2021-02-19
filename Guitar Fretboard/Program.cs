@@ -24,6 +24,7 @@ namespace Guitar_Fretboard
             tuning.BassEStandard(bassEStandard);
 
             List<InstrumentString> currentTuning = eStandard;
+            int currentNumberOfFrets = 22;
 
             bool refreshMenu = true;
 
@@ -34,7 +35,7 @@ namespace Guitar_Fretboard
                 Console.WriteLine("1. Display Left-handed fretboard");
                 Console.WriteLine("2. Display Right-handed fretboard");
                 Console.WriteLine("3. Begin random fret quiz");
-                Console.WriteLine("4. Change tuning");
+                Console.WriteLine("4. Change tuning (alternate tunings only available for guitar)");
                 Console.WriteLine("5. Change instrument");
                 string menuOption = Console.ReadLine().ToLower();
 
@@ -42,17 +43,17 @@ namespace Guitar_Fretboard
                 {
                     case "1":
                         Console.Clear();
-                        DisplayFretboard.LeftHanded(currentTuning);
+                        DisplayFretboard.LeftHanded(currentTuning, currentNumberOfFrets);
                         break;
 
                     case "2":
                         Console.Clear();
-                        DisplayFretboard.RightHanded(currentTuning);
+                        DisplayFretboard.RightHanded(currentTuning, currentNumberOfFrets);
                         break;
 
                     case "3":
                         Console.Clear();
-                        QuestionAnswer.RepeatQuestionAnswerLoop(currentTuning);
+                        QuestionAnswer.RepeatQuestionAnswerLoop(currentTuning, currentNumberOfFrets);
                         break;
 
                     case "4":
@@ -66,9 +67,11 @@ namespace Guitar_Fretboard
                         {
                             case "1":
                                 currentTuning = eStandard;
+                                currentNumberOfFrets = 22;
                                 break;
                             case "2":
                                 currentTuning = eFlatStandard;
+                                currentNumberOfFrets = 22;
                                 break;
                             default:
                                 Console.WriteLine("Invalid selection. You will be returned to main menu.");
@@ -88,9 +91,11 @@ namespace Guitar_Fretboard
                         {
                             case "1":
                                 currentTuning = eStandard;
+                                currentNumberOfFrets = 22;
                                 break;
                             case "2":
                                 currentTuning = bassEStandard;
+                                currentNumberOfFrets = 20;
                                 break;
                             default:
                                 Console.WriteLine("Invalid selection. You will be returned to main menu.");
