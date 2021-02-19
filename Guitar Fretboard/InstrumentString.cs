@@ -71,25 +71,9 @@ namespace Guitar_Fretboard
             this.note[24] = open;
         }
 
-        public void DrawStringLeft()
-        {
-            for (int count = 22; count >= 0; count--)
-            {
-                Console.Write(note[count] + " ");
-            }
-        }
-
         public void DrawStringLeft(int neckLength)
         {
             for (int count = neckLength; count >= 0; count--)
-            {
-                Console.Write(note[count] + " ");
-            }
-        }
-
-        public void DrawStringRight()
-        {
-            for (int count = 0; count < 23; count++)
             {
                 Console.Write(note[count] + " ");
             }
@@ -121,82 +105,6 @@ namespace Guitar_Fretboard
         public void CountRight(int neckLength)
         {
             for (int count = 0; count <= neckLength; count++)
-            {
-                if (count < 10)
-                {
-                    Console.Write(fret[count] + "  ");
-                }
-                else
-                {
-                    Console.Write(fret[count] + " ");
-                }
-            }
-        }
-
-        public void CountLeft()
-        {
-            for (int count = 22; count >= 0; count--)
-            {
-                if (count < 10)
-                { 
-                    Console.Write(fret[count] + "  "); 
-                }
-                else
-                {
-                    Console.Write(fret[count] + " ");
-                }
-            }
-        }
-
-        public void CountRight()
-        {
-            for (int count = 0; count < 23; count++)
-            {
-                if (count < 10)
-                {
-                    Console.Write(fret[count] + "  ");
-                }
-                else
-                {
-                    Console.Write(fret[count] + " ");
-                }
-            }
-        }
-
-        public void DrawStringLeft24()
-        {
-            for (int count = 24; count >= 0; count--)
-            {
-                Console.Write(note[count] + " ");
-            }
-        }
-
-        public void DrawStringRight24()
-        {
-            for (int count = 0; count < 25; count++)
-            {
-                Console.Write(note[count] + " ");
-            }
-        }
-
-        public void CountLeft24()
-        {
-            for (int count = 24; count >= 0; count--)
-            {
-                if (count < 10)
-                {
-                    Console.Write(fret[count] + "  ");
-                }
-                else
-                {
-                    Console.Write(fret[count] + " ");
-                }
-            }
-        }
-
-        public void CountRight24()
-        {
-            for (int count = 0; count < 25; count++)
             {
                 if (count < 10)
                 {
