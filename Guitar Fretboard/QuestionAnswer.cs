@@ -81,21 +81,50 @@ namespace Guitar_Fretboard
                 Console.Clear();
             }
         }
-        public static void RepeatQuestionAnswerLoop24Fret(List<InstrumentString> strings)
+        public static List<InstrumentString> ChangeTuning(List<InstrumentString> currentTuning)
         {
-            bool repeatQuestion = true;
-            while (repeatQuestion)
-            {
-                RandomFretQuestion(strings, 25);
+            Tuning tuning = new Tuning();
 
-                string quit = Console.ReadLine();
-                quit = quit.ToLower();
-                if (quit == "q")
-                {
-                    repeatQuestion = false;
-                }
-                Console.Clear();
+            List<InstrumentString> eStandard = new List<InstrumentString>();
+            tuning.EStandard(eStandard);
+
+            List<InstrumentString> eFlatStandard = new List<InstrumentString>();
+            tuning.EFlatStandard(eFlatStandard);
+
+            List<InstrumentString> dropD = new List<InstrumentString>();
+            tuning.DropD(dropD);
+
+            List<InstrumentString> dropDFlat = new List<InstrumentString>();
+            tuning.DropDFlat(dropDFlat);
+
+            Console.WriteLine("Select your tuning:");
+            Console.WriteLine("1. E Standard (default)");
+            Console.WriteLine("2. E Flat Standard (AKA D# Standard)");
+            Console.WriteLine("3. Drop D");
+            Console.WriteLine("4. Drop D Flat (AKA Drop C#)");
+            string tuningChoice = Console.ReadLine().ToLower();
+
+            switch (tuningChoice)
+            {
+                case "1":
+                    currentTuning = eStandard;
+                    break;
+                case "2":
+                    currentTuning = eFlatStandard;
+                    break;
+                case "3":
+                    currentTuning = dropD;
+                    break;
+                case "4":
+                    currentTuning = dropDFlat;
+                    break;
+                default:
+                    Console.WriteLine("Invalid selection. You will be returned to main menu.");
+                    Console.ReadLine();
+                    break;
             }
+
+            return currentTuning;
         }
     }
 }
