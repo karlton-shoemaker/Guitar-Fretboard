@@ -21,8 +21,8 @@ namespace Guitar_Fretboard
 
             Tuning tuning = new Tuning();
 
-            DisplayFretboard displayFretboard = new DisplayFretboard();
-            QuestionAnswer questionAnswer = new QuestionAnswer();
+            //DisplayFretboard displayFretboard = new DisplayFretboard();
+            //QuestionAnswer questionAnswer = new QuestionAnswer();
 
             List<GuitarString> eStandard = new List<GuitarString>();
             tuning.EStandard(eStandard);
@@ -37,12 +37,12 @@ namespace Guitar_Fretboard
             while (refreshMenu)
             {
                 Console.Clear();
-                Console.WriteLine("Which option would you like to do? Press 'Q' to exit.");
-                Console.WriteLine("1. Display Left-handed fretboard.");
-                Console.WriteLine("2. Display Right-handed fretboard.");
-                Console.WriteLine("3. Display Left-handed fretboard with 24 frets.");
-                Console.WriteLine("4. Display Right-handed fretboard with 24 frets.");
-                Console.WriteLine("5. Begin random fret quiz.");
+                Console.WriteLine("Which option would you like to do? Press 'Q' to exit");
+                Console.WriteLine("1. Display Left-handed fretboard");
+                Console.WriteLine("2. Display Right-handed fretboard");
+                Console.WriteLine("3. Display Left-handed fretboard with 24 frets");
+                Console.WriteLine("4. Display Right-handed fretboard with 24 frets");
+                Console.WriteLine("5. Begin random fret quiz");
                 Console.WriteLine("6. Change Tuning");
                 string menuOption = Console.ReadLine().ToLower();
 
@@ -50,27 +50,27 @@ namespace Guitar_Fretboard
                 {
                     case "1":
                         Console.Clear();
-                        displayFretboard.LeftHanded(currentTuning);
+                        DisplayFretboard.LeftHanded(currentTuning);
                         break;
 
                     case "2":
                         Console.Clear();
-                        displayFretboard.RightHanded(currentTuning);
+                        DisplayFretboard.RightHanded(currentTuning);
                         break;
 
                     case "3":
                         Console.Clear();
-                        displayFretboard.LeftHanded24(currentTuning);
+                        DisplayFretboard.LeftHanded24(currentTuning);
                         break;
 
                     case "4":
                         Console.Clear();
-                        displayFretboard.RightHanded24(currentTuning);
+                        DisplayFretboard.RightHanded24(currentTuning);
                         break;
 
                     case "5":
                         Console.Clear();
-                        questionAnswer.RepeatQuestionAnswerLoop(currentTuning);
+                        QuestionAnswer.RepeatQuestionAnswerLoop(currentTuning);
                         break;
 
                     case "6":
