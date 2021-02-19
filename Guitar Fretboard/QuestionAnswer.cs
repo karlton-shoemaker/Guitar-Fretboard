@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Guitar_Fretboard
 {
-    class QuestionAnswer
+    static class QuestionAnswer
     {
         public static void AskQuestion(GuitarString guitarString, int randomNote)
         {
@@ -26,33 +26,32 @@ namespace Guitar_Fretboard
             Random random = new Random();
             int randomString = random.Next(6);
             int randomNote = random.Next(numberOfFrets);
-            //QuestionAnswer questionAnswer = new QuestionAnswer();
 
             switch (randomString)
             {
                 case 0:
-                    QuestionAnswer.AskQuestion(strings[0], randomNote);
-                    QuestionAnswer.DisplayAnswer(strings[0], randomNote);
+                    AskQuestion(strings[0], randomNote);
+                    DisplayAnswer(strings[0], randomNote);
                     break;
                 case 1:
-                    QuestionAnswer.AskQuestion(strings[1], randomNote);
-                    QuestionAnswer.DisplayAnswer(strings[1], randomNote);
+                    AskQuestion(strings[1], randomNote);
+                    DisplayAnswer(strings[1], randomNote);
                     break;
                 case 2:
-                    QuestionAnswer.AskQuestion(strings[2], randomNote);
-                    QuestionAnswer.DisplayAnswer(strings[2], randomNote);
+                    AskQuestion(strings[2], randomNote);
+                    DisplayAnswer(strings[2], randomNote);
                     break;
                 case 3:
-                    QuestionAnswer.AskQuestion(strings[3], randomNote);
-                    QuestionAnswer.DisplayAnswer(strings[3], randomNote);
+                    AskQuestion(strings[3], randomNote);
+                    DisplayAnswer(strings[3], randomNote);
                     break;
                 case 4:
-                    QuestionAnswer.AskQuestion(strings[4], randomNote);
-                    QuestionAnswer.DisplayAnswer(strings[4], randomNote);
+                    AskQuestion(strings[4], randomNote);
+                    DisplayAnswer(strings[4], randomNote);
                     break;
                 case 5:
-                    QuestionAnswer.AskQuestion(strings[5], randomNote);
-                    QuestionAnswer.DisplayAnswer(strings[5], randomNote);
+                    AskQuestion(strings[5], randomNote);
+                    DisplayAnswer(strings[5], randomNote);
                     break;
             }
         }
@@ -61,8 +60,7 @@ namespace Guitar_Fretboard
             bool repeatQuestion = true;
             while (repeatQuestion)
             {
-                //QuestionAnswer questionAnswer = new QuestionAnswer();
-                QuestionAnswer.RandomFretQuestion(strings, 23);
+                RandomFretQuestion(strings, 23);
 
                 string quit = Console.ReadLine();
                 quit = quit.ToLower();
@@ -78,8 +76,7 @@ namespace Guitar_Fretboard
             bool repeatQuestion = true;
             while (repeatQuestion)
             {
-                //QuestionAnswer questionAnswer = new QuestionAnswer();
-                QuestionAnswer.RandomFretQuestion(strings, 25);
+                RandomFretQuestion(strings, 25);
 
                 string quit = Console.ReadLine();
                 quit = quit.ToLower();

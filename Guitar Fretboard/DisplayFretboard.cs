@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Guitar_Fretboard
 {
-    class DisplayFretboard
+    static class DisplayFretboard
     {
         public static void LeftHanded(List<GuitarString> strings)
         {

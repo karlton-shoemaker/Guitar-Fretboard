@@ -12,17 +12,7 @@ namespace Guitar_Fretboard
             //-Create filter for different keys
             //-Add quizzes for other instruments: bass (cut off bString and highEString), ukulele, banjo, etc.
 
-            //GuitarString eString = new GuitarString("E ", "F ", "F#", "G ", "G#", "A ", "A#", "B ", "C ", "C#", "D ", "D#");
-            //GuitarString aString = new GuitarString("A ", "A#", "B ", "C ", "C#", "D ", "D#", "E ", "F ", "F#", "G ", "G#");
-            //GuitarString dString = new GuitarString("D ", "D#", "E ", "F ", "F#", "G ", "G#", "A ", "A#", "B ", "C ", "C#");
-            //GuitarString gString = new GuitarString("G ", "G#", "A ", "A#", "B ", "C ", "C#", "D ", "D#", "E ", "F ", "F#");
-            //GuitarString bString = new GuitarString("B ", "C ", "C#", "D ", "D#", "E ", "F ", "F#", "G ", "G#", "A ", "A#");
-            //GuitarString highEString = new GuitarString("e ", "f ", "f#", "g ", "g#", "a ", "a#", "b ", "c ", "c#", "d ", "d#");
-
             Tuning tuning = new Tuning();
-
-            //DisplayFretboard displayFretboard = new DisplayFretboard();
-            //QuestionAnswer questionAnswer = new QuestionAnswer();
 
             List<GuitarString> eStandard = new List<GuitarString>();
             tuning.EStandard(eStandard);
