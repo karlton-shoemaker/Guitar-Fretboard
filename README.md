@@ -1,0 +1,3 @@
+# Guitar-Fretboard
+
+This was a project I start on my own in order to get practice with C# and Object-Oriented Programming. The initial goal was to display a traditional fretboard diagram in a console window, and then reverse it to show a left-handed guitar's fretboard layout since I am left-handed, and there are not a whole lot of resources out there for lefties. Once I achieved that, I added a quiz of the string and fret number so that I could test my knowledge of which note corresponded to which fret. Once that was finished I also added functionality to change the tunings displayed and even change instruments, which is something I plan on continuing to do.
